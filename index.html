@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../style/style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -22,6 +22,10 @@
       href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Montserrat:wght@500&display=swap"
       rel="stylesheet"
     />
+    <link
+  rel="stylesheet"
+  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+/>
   </head>
   <body>
     <header>
@@ -59,10 +63,10 @@
       <!-----------nav3 start--------------->
       <nav class="nav3">
         <ul>
-          <li><a href="#"><i class="fa fa-home"></i>HEM</a></li>
+          <li><a href="index.html"><i class="fa fa-home"></i>HEM</a></li>
           <li><a href="#"><i class="fa fa-user"></i>MEN</a></li>
           <li><a href="#"><i class="fa fa-users"></i>Tillbehör</a></li>
-          <li><a href="#"><i class="fa fa-anchor"></i>
+          <li><a href="klockor.html"><i class="fa fa-anchor"></i>
           klockor <i class="fa fa-caret-down"></a></i>
             <ul>
               <li>
@@ -80,8 +84,30 @@
       </nav>
       <!-----------nav3 slut-------->
 
+        <section id="sidenav">
+          <ul>
+            <li><a href="index.html"><i class="fa fa-home"></i>HEM</a></li>
+            <li><a href="#"><i class="fa fa-user"></i>MEN</a></li>
+            <li><a href="#"><i class="fa fa-users"></i>Tillbehör</a></li>
+          
+            <li><a href="erbjudanden.html"><i class="fa fa-calendar-check-o"></i>KATALOG</a></li>
+            <li><a href="registrera.html"><i class="fa fa-search"></i>Registrera</a></li>
+            <li><a href="klockor.html"><i class="fa fa-anchor"></i>
+              klockor <i class="fa fa-caret-down"></a></i>
+                <ul>
+                  <li>
+                    <a href="#"><i class="fa fa-clipboard">SPRINTAR</i></a>
+                    <a href="#"><i class="fa fa-circle-o">URTAVLA</i></a>
+                    <a href="#"><i class="fa fa-gavel">ARMBAND</i></a>
+                  </li>
+                </ul>
+            </li>
 
 
+
+          </ul>
+        </section>
+        <i class="fa fa-anchor" id="menubar"></i>
       <!---------featured start----------->
           <section class="featured">
             <div class="featured-text">
@@ -104,6 +130,64 @@
 
       </div>
       <div class="card-containter">
+      <div class="card">
+        <div>
+          <img src="new3.png" alt="">
+        </div>
+        <h1>DREYFUSS & CO</h1>
+        <span>
+          <i class=" fa fa-star"></i>
+          <i class=" fa fa-star"></i>
+          <i class=" fa fa-star"></i>
+          <i class=" fa fa-star"></i>
+        </span>
+        <p>$1000.00</p>
+        <button>Lägg Till</button>
+      </div>
+      <div class="card">
+        <div>
+          <img src="/img/5e4a7718727fa.jpeg" alt="bälte">
+        </div>
+        <h1>Läderarmband</h1>
+        <span>
+          <i class=" fa fa-star"></i>
+          <i class=" fa fa-star"></i>
+          <i class=" fa fa-star"></i>
+          <i class=" fa fa-star"></i>
+        </span>
+        <p>$100.00</p>
+        <button>Lägg Till</button>
+      </div>
+      <div class="card">
+        <div>
+          <img src="blue_dial-oystersteel-40575_g_34.jpg" alt="">
+        </div>
+        <h1>Sprintar</h1>
+        <span>
+          <i class=" fa fa-star"></i>
+          <i class=" fa fa-star"></i>
+          <i class=" fa fa-star"></i>
+          <i class=" fa fa-star"></i>
+        </span>
+        <p>$30.00</p>
+        <button>Lägg Till</button>
+      </div>
+      <div class="card">
+        <div>
+          <img src="Pin-to-bracelet-SPREAD-BARS.jpeg" alt="">
+        </div>
+        <h1>Urtavla</h1>
+        <span>
+          <i class=" fa fa-star"></i>
+          <i class=" fa fa-star"></i>
+          <i class=" fa fa-star"></i>
+          <i class=" fa fa-star"></i>
+        </span>
+        <p>$100000.00</p>
+        <button>Lägg Till</button>
+      </div>
+    </div>
+    <div class="card-containter">
       <div class="card">
         <div>
           <img src="new3.png" alt="">
@@ -165,5 +249,96 @@
     <!----------senaste slut------------->
 
 
+    <section class="trends">
+      <div class="product-intro">
+        <h1>Nya <span>Ankomster</span></h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque aperiam necessitatibus voluptatum architecto. Iusto, voluptatibus aliquam labore fuga corrupti est placeat rem consectetur iure commodi recusandae, praesentium repellat exercitationem ab?</p>
+      </div>
+
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="single_card_variation_2_Earth_670x670.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="single_card_variation_2_Jupiter_670x670.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="single_card_variation_2_Mercury_670x670.jpg" alt="">
+          </div>
+          <div class="swiper-slide">
+            <img src="single_card_variation_2_Pluto_670x670.jpg" alt="">
+          </div>
+
+
+          <div class="swiper-pagination"></div>
+        </div>
+
+
+    </section>
+   
+    
+    <footer>
+      <div>
+        <h1>Klock-<span>Delar</span></h1>
+        <p>Allt för klockor</p>
+
+      </div>
+      <div>
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-whatsapp"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-pinterest"></i>
+        
+      </div>
+      <div>
+        <p>
+          @2022 Copyright All Rights Reserved 
+        </p>
+      </div>
+    </footer>
+   
+   
+   
+   
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 1200,
+          modifier: 1,
+          slideShadows: false,
+        },
+        loop:true,
+        autoplay:{
+          delay:2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
+
+    <script>
+      var sidenav= document.getElementById('sidenav');
+      var menubar= document.getElementById('menubar');
+      sidenav.style.width="0px"
+      menubar.onclick=function(){
+        if( sidenav.style.width=="0px"){
+          sidenav.style.width="250px";
+        }
+        else{
+          sidenav.style.width="0px";
+        }
+      }
+    </script>
   </body>
 </html>
