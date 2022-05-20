@@ -51,6 +51,7 @@ header {
 .nav1 .right i:hover {
   transform: rotate(360deg);
 }
+
 .nav2 {
   width: 100%;
   height: 120px;

@@ -272,7 +272,7 @@ footer i {
 #menubar {
   display: none;
 }
-@media only screen and(max-width:900px) {
+@media only screen and(max-width:650px) {
   #sidenav {
     display: block;
   }
@@ -348,7 +348,8 @@ footer i {
   #sidenav ul li:hover > ul {
     display: block;
   }
-
+}
+@media only screen and(max-width:650px) {
   .nav1 {
     position: relative;
     z-index: 2;
