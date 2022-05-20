@@ -272,188 +272,207 @@ footer i {
 #menubar {
   display: none;
 }
-@media only screen and(max-width:650px) {
-  #sidenav {
-    display: block;
-  }
-  #menubar {
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translate(0%, -50%);
-    z-index: 99;
-    background-color: var(--primary);
-    color: white;
-    font-size: 2rem;
-    padding: 20px 10px;
-    animation: animate 5s ease infinite;
-  }
-  @keyframes animate {
-    0% {
-      background-color: var(--secondary);
-    }
-    100% {
-      background-color: var(--primary);
-    }
-  }
 
-  #sidenav {
-    width: 0px;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 3;
-    background-color: var(--light);
-    padding-top: 70px;
-    display: block;
-    overflow: hidden;
-    transition: 0.5s ease-in-out;
+@import url("https://fonts.googleapis.com/css2?family=Cabin&display=swap");
+
+body {
+  padding: 0px;
+  margin: 0px;
+  font-size: 20px;
+  min-height: 200vh;
+  font-family: "Cabin", Sans-serif;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s, visibility 0.35s, height 0.35s;
+  overflow: hidden;
+  background: black;
+  z-index: -1;
+}
+
+#main-menu {
+  display: block;
+  height: 100px;
+  width: 100%;
+  background: #3d0e61;
+  margin: 0px;
+  z-index: 9;
+}
+
+#main-menu ul {
+  max-width: 800px;
+  width: 100%;
+  height: 100%;
+  margin: 0px auto;
+  padding: 0px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 9;
+}
+
+#main-menu li {
+  list-style-type: none;
+  font-size: 2rem;
+}
+
+#main-menu a {
+  color: #b9faf8;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+#main-menu a:hover {
+  text-decoration: underline;
+}
+
+#hamburger-input {
+  display: none;
+}
+
+#hamburger-menu {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  display: none;
+  border: none;
+  padding: 0px;
+  margin: 0px;
+  font-family: "Cabin", Sans-serif;
+  background: linear-gradient(
+    to bottom,
+    #3d0e61,
+    #3d0e61 20%,
+    white 20%,
+    white 40%,
+    #3d0e61 40%,
+    #3d0e61 60%,
+    white 60%,
+    white 80%,
+    #3d0e61 80%,
+    #3d0e61 100%
+  );
+}
+
+#hamburger-menu #sidebar-menu {
+  visibilty: hidden;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 200px;
+  height: 100%;
+  background-color: #3d0e61;
+  transition: 0.3s;
+  padding: 0px 10px;
+  box-sizing: border-box;
+}
+
+#hamburger-menu h3 {
+  color: #b9faf8;
+  font-size: 2.2rem;
+}
+
+#hamburger-menu ul {
+  padding-left: 0px;
+}
+
+#hamburger-menu li {
+  list-style-type: none;
+  line-height: 3rem;
+}
+
+#hamburger-menu a {
+  color: #b9faf8;
+  font-size: 1.3rem;
+  text-decoration: none;
+}
+
+#hamburger-menu a:hover {
+  text-decoration: underline;
+}
+
+#hamburger-input:checked + #hamburger-menu #sidebar-menu {
+  visibility: visible;
+  left: 0;
+}
+#hamburger-input:checked ~ .overlay {
+  visibility: visible;
+  opacity: 0.4;
+}
+
+@media screen and (max-width: 750px) {
+  #main-menu {
+    display: none;
   }
-  #sidenav ul {
+  #hamburger-menu {
+    display: inline;
+  }
+  .nav3 ul {
     list-style: none;
+    text-align: center;
+    display: none;
   }
-  #sidenav ul li {
-    display: block;
-    width: 200px;
+  .nav3 ul li {
+    display: inline-block;
+    width: 150px;
     position: relative;
     z-index: 99;
-    margin: 10px 20px;
+    display: none;
   }
-  #sidenav ul li a {
+  .nav3 ul li a {
     text-decoration: none;
-    color: white;
+    color: black;
     font-weight: 500;
-    display: block;
-    font-size: 20px;
-    padding: 10px 20px;
+    display: none;
   }
-  #sidenav ul li a:hover {
+  .nav3 ul li a:hover {
     color: var(--primary);
+    display: none;
   }
-  #sidenav ul li i {
-    color: white;
+  .nav3 ul li i {
+    color: var(--primary);
     margin: 0px 5px;
+    display: none;
   }
-  #sidenav ul ul {
-    position: absolute;
+  .nav3 ul ul {
+    position: none;
     top: 70px;
     left: 0;
     display: none;
   }
-  #sidenav ul ul li {
-    border-bottom: 1px solid white;
-  }
-  #sidenav ul li:hover > ul {
-    display: block;
-  }
-}
-@media only screen and(max-width:650px) {
-  .nav1 {
-    position: relative;
-    z-index: 2;
+  .nav3 ul ul li {
     background-color: white;
-  }
-  .right i {
-    font-size: 15px;
-    margin: 0px 5px;
-  }
-  .nav2 {
-    width: 100%;
-    height: 80px;
-  }
-  .nav2 .nav2-left i {
-    margin-left: 0px;
-  }
-  .nav2 .nav2-center h1 {
-    font-size: 1.5rem;
-    letter-spacing: 2px;
-  }
-  .nav2 .nav2-center p {
-    color: gray;
-    font-size: 10px;
-    margin-top: 5px;
-  }
-  .nav2 .nav2-right i {
-    margin: 0px 5px;
-  }
-  .nav3 {
+    border-bottom: 1px solid var(--primary);
     display: none;
   }
-  .featured {
-    background-attachment: fixed;
+  .nav3 ul li:hover > ul {
+    display: none;
   }
-
-  .latest {
-    padding: 0px 50px;
-  }
-  .product-intro {
+  .nav1 {
+    width: 100%;
+    height: 80px;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 2px 0px 3px grey;
     text-align: center;
   }
-  .product-intro h1 {
-    color: var(--primary);
-    letter-spacing: 0.2rem;
-    font-size: 2rem;
-    font-weight: bolder;
-    margin-top: 250px;
-  }
-  .product-intro h1 span {
-    color: var(--secondary);
-  }
-  .product-intro p {
-    color: grey;
-    margin: 15px 0;
-  }
-  .card-container {
-    margin: 2rem 0;
-  }
-  .card-container .card {
-    flex-basis: 100%;
-    padding: 0.8rem;
-    position: relative;
-    text-align: center;
-  }
-  .card img {
-    width: 20%;
-    transition: 0.5s ease-in-out;
-  }
-  .card i {
-    color: goldenrod;
-    margin: 10px 0;
-  }
-  .card button {
-    color: white;
-    background-color: var(--secondary);
-    border: none;
-    outline: none;
-    margin-top: 15px;
-    padding: 5px 20px;
-  }
-  .trends {
-    padding: 20px 50px;
-    background-color: rgb(0, 0, 0, 0.01);
-  }
-
-  .trends .swiper-container {
-    width: 100%;
-    padding: 50px;
-  }
-
-  .trends .swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 360px;
-    height: 360px;
-  }
-
-  .trends .swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-  footer div {
-    flex-basis: 50%;
-    margin: 10px 0;
+  .nav2 .nav2-left,
+  .nav2 .nav2-center,
+  .nav2 .nav2-right {
+    flex-basis: 30%;
+    margin: auto;
+    cursor: pointer;
+    display: none;
   }
 }
